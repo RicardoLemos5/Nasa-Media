@@ -18,8 +18,8 @@ const port = 3000;
 // const API_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
 dotenv.config();
-const apiKey = process.env.API_KEY;
-const API_URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+const API_KEY = process.env.API_KEY;
+const API_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
