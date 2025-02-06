@@ -15,11 +15,11 @@ import dotenv from "dotenv";
 
 const app = express();
 const port = 3000;
-const API_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+// const API_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
-// dotenv.config();
-// const apiKey = process.env.API_KEY;
-// const API_URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
+dotenv.config();
+const apiKey = process.env.API_KEY;
+const API_URL = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
