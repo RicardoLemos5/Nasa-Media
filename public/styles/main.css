@@ -4,7 +4,8 @@ html, body {
 }
 
 body {
-    background-color: #9290C3;
+    background-color: #1b1b1f;
+    color: rgb(255, 255, 230);
     font-family: "Tektur", serif;
 }
 
@@ -24,7 +25,7 @@ body {
 
 #header ul > li:first-child > a {
     background-color: #1B1A55;
-    color: white;
+    color: rgb(255, 255, 230);
     border-radius: 10px;
 }
 
@@ -86,7 +87,7 @@ body {
 }
 
 #info-container h1{
-    color: #070F2B;
+    color: #535C91;
     padding-bottom: 20px;
 }
 
