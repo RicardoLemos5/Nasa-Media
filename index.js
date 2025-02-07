@@ -21,6 +21,7 @@ dotenv.config();
 const API_KEY = process.env.API_KEY;
 console.log(API_KEY);
 const API_URL = `https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`;
+console.log(API_URL);
 
 app.use(express.static("public"));
 app.use(express.urlencoded({extended: true}));
