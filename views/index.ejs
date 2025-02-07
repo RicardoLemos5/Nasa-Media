@@ -99,8 +99,12 @@
 
     <section id="info">
       <div id="info-container">
-        <h1><%= title %></h1>
-        <p><%= explanation %></p>
+        <% if (locals.title && locals.explanation) { %>
+          <h1><%= title %></h1>
+          <p><%= explanation %></p>
+        <% } else { %>
+          <h1>Can't retrieve data</h1>
+        <% } %>
       </div>
     </section>
 
