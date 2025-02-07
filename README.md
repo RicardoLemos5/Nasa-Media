@@ -44,3 +44,6 @@ Nasa Media website that shows the current picture/video of the day and displays 
 
 ## Website link
 https://nasa-media-w6tl.onrender.com
+<br />
+<br />
+Note: Webiste takes 1-2 mins to "wake up" uppon request.
