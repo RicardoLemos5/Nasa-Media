@@ -34,7 +34,7 @@ Nasa Media website that shows the current picture/video of the day and displays 
    ```
 3. Run server
    ```sh
-   node index.js
+   nodemon index.js
    ```
 4. Open your browser and navigate to:
    ```sh
