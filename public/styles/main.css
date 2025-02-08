@@ -58,6 +58,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 60px 30px black;
     max-height: 600px;
+    max-width: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 #cover img:hover {
@@ -82,7 +85,7 @@ body {
 }
 
 #info-container {
-    padding: 30px 100px 30px 100px;
+    margin: 30px 100px 30px 100px;
     text-align: center;
 }
 
@@ -95,4 +98,15 @@ body {
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 1.7;
+}
+
+@media (max-width: 480px) {
+    #info-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    #info-container p{
+        font-size: 1rem;
+    }
 }
