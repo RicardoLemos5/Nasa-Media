@@ -9,6 +9,7 @@ body {
     font-family: "Tektur", serif;
 }
 
+/* Header */
 #header {
     background-color: #535C91;
     font-family: "Space Grotesk", serif;
@@ -29,6 +30,7 @@ body {
     border-radius: 10px;
 }
 
+/* Handle error */
 #error {
     padding-top: 100px;
 }
@@ -43,6 +45,7 @@ body {
     font-style: italic;
 }
 
+/* Cover */
 #cover {
     background-color: #131321;
 }
@@ -84,8 +87,9 @@ body {
     opacity: 1;
 }
 
+/* Media Information */
 #info-container {
-    margin: 30px 100px 30px 100px;
+    margin: 30px 100px 100px 100px;
     text-align: center;
 }
 
@@ -100,13 +104,44 @@ body {
     line-height: 1.7;
 }
 
-@media (max-width: 480px) {
+hr {
+    width: 50%;
+    margin: 20px auto;
+    border: 2px solid #535C91;
+}
+
+@media (max-width: 768px) {
     #info-container {
         margin-left: 50px;
         margin-right: 50px;
     }
 
+    #search-container {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media (max-width: 480px) {
     #info-container p{
         font-size: 1rem;
     }
+}
+
+/* Search */
+.image-background {
+    background-color: #131321;
+}
+
+.image-background img {
+    margin: 20px;
+    max-height: 500px;
+}
+
+/* Footer */
+#footer-container {
+    background-color: #535C91;
+    text-align: center;
+    padding: 20px; 
+    font-family: "Space Grotesk", serif;
 }
