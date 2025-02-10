@@ -1,21 +1,9 @@
-// TODO:
-// Choose an API for Project
-// Create html tags for the API response
-// Make it functional
-// Style the Website
-// Make it Web Responsive
-// Push Project
-// Include Readme.md
-// Follow this Steps to publish to RENDER web server:
-// https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/38892394#questions/20817356
-
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv";
 
 const app = express();
 const port = 3000;
-// const API_URL = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
 
 var date = "dd/mm/yyyy";
 var selectedMedia = {};
@@ -32,9 +20,6 @@ app.get("/", async (req, res) => {
     try{
         const response = await axios.get(API_URL);
         const result = response.data;
-        console.log(selectedMedia.media_type);
-        console.log(selectedMedia.hdurl);
-        console.log(selectedMedia.url);
         res.render("index.ejs", {
             mediaType: result.media_type,
             image: result.hdurl,
@@ -58,10 +43,17 @@ app.get("/", async (req, res) => {
 
 app.get("/submit", async (req, res) => {
     try{
-        date = req.query.date;
-        console.log(date);
-        const response = await axios.get(`${API_URL}&date=${date}`);
-        selectedMedia = response.data;        
+        // Check if the randomize button was clicked
+        if (req.query.action === "randomize") {
+            const response = await axios.get(`${API_URL}&count=1`);
+            selectedMedia = response.data[0];  
+            date = selectedMedia.date;
+        } else {
+            // Date was selected
+            date = req.query.date;
+            const response = await axios.get(`${API_URL}&date=${date}`);
+            selectedMedia = response.data;
+        }
         res.redirect("/");
     } catch (error) {
         if (error.response.status >= 400 && error.response.status < 500) {

@@ -30,6 +30,10 @@ body {
     border-radius: 10px;
 }
 
+#header ul > li:first-child > a:hover {
+    color: #FF7C47;
+}
+
 /* Handle error */
 #error {
     padding-top: 100px;
@@ -126,6 +130,17 @@ hr {
     width: 280px;
     font-size: 2rem;
     text-align: center;
+}
+
+#randomize-button {
+    background-color: #535C91;
+    font-size: 2rem;
+    margin-top: 50px;
+    color: rgb(255, 255, 230);
+}
+
+#randomize-button:hover {
+    background-color: #FF7C47;
 }
 
 .image-background iframe {
