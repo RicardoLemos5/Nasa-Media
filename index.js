@@ -60,6 +60,8 @@ app.get("/submit", async (req, res) => {
             // Handles dates outside scope
             selectedMedia = {};
             res.redirect("/");
+        } else if (error.response.status >= 500) {
+            res.redirect("/submit");
         } else {
             console.log(error.response.status);
             console.log(error.response.statusText);
