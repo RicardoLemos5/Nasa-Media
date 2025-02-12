@@ -11,11 +11,14 @@
 ## About The Project
 
 Nasa Media website that shows the current picture/video of the day and displays it's information.
+<br />
+Look for media by date or show random media.
 
 ### Built With
 
 - **Frontend**: HTML, CSS, Bootstrap.
 - **Backend**: Node.js, Express.js, EJS, Axios.
+- **External APIs**: Astronomy Picture of the Day (APOD) API
 <br />
 
 
